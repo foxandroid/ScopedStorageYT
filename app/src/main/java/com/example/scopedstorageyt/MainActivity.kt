@@ -1,6 +1,7 @@
 package com.example.scopedstorageyt
 
 import android.content.ContentValues
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
@@ -65,7 +66,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.saveButton.setOnClickListener {
-            takePhoto.launch()
+            //takePhoto.launch()
+                    startActivity(Intent(this,ReadExternalStorage::class.java))
         }
 
 
